@@ -10,14 +10,18 @@ export class AppComponent implements OnInit {
   weather: any;
   temperature = 0;
   humidite = 0;
+  ville = 'Dakar';
+  unite = 'imperial';
   constructor(private weatherService: WeatherServiceService) {}
 
   ngOnInit(): void {
-    this.weatherService.getWeatherApi().subscribe((response) => {
-      console.log(response);
-      this.weather = response;
-      this.temperature = this.weather.main.temp;
-      this.humidite = this.weather.main.humidity;
-    });
+    this.weatherService
+      .getWeatherApi(this.ville, this.unite)
+      .subscribe((response) => {
+        console.log(response);
+        this.weather = response;
+        this.temperature = this.weather.main.temp;
+        this.humidite = this.weather.main.humidity;
+      });
   }
 }
