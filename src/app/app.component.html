@@ -1,17 +1,21 @@
 <div class="container">
-  <div class="card has-background-primary mt-4">
-    <h1 class="title has-text-white has-text-centered">{{ ville }}</h1>
-    <img
-      class="image"
-      src="https://www.senzo-etudes.com/wp-content/uploads/2021/05/3805358691_50173484_prevision-meteo.jpg"
-      alt=""
-    />
-
-    <div
-      class="card-content has-text-centered has-text-weight-bold is-size-4 has-text-white"
-    >
-      <p class="card-content">Température: {{ temperature }} °C</p>
-      <p class="card-content">Humidité: {{ humidite }} %</p>
+  <div class="widget">
+    <div class="details">
+      <div class="temperature">{{ temperature | number : "1.0-0" }} °</div>
+      <div class="summary">
+        <p class="summaryText">{{ temps }}</p>
+      </div>
+      <div class="precipitation">Humidité: {{ humidite }} %</div>
+      <div class="wind">Vent: {{ vent }} mph</div>
+      <h2>{{ ville }}, {{ pays }}</h2>
     </div>
+    <div class="pictoBackdrop"></div>
+    <div class="pictoFrame"></div>
+    <div class="pictoCloudBig"></div>
+    <div class="pictoCloudFill"></div>
+    <div class="pictoCloudSmall"></div>
+    <div class="iconCloudBig"></div>
+    <div class="iconCloudFill"></div>
+    <div class="iconCloudSmall"></div>
   </div>
 </div>

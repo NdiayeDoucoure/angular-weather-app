@@ -7,12 +7,11 @@ import { HttpClient } from '@angular/common/http';
 export class WeatherServiceService {
   constructor(private http: HttpClient) {}
 
-  getWeatherApi(ville: string, unite: string) {
+  getWeatherApi(ville: string) {
     return this.http.get(
-      'https://api.openweathermap.org/data/2.5/weather?q=' +
+      'http://api.weatherapi.com/v1/current.json?key=332d8cfee3c340799cc150700230205&q=' +
         ville +
-        '&appid=062aff386c1a8cd44f97fcf9dcc2b50a&units=' +
-        unite
+        '&lang=fr'
     );
   }
 }

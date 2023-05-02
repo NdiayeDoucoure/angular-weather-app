@@ -1,9 +1,0 @@
-@import "bulma/css/bulma.css";
-* {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: aquamarine;
-}
-.card {
-  width: 50%;
-  margin: 0 auto;
-}
